@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione;
+package com.kisaraginoah.nanione.favorite;
 
 import com.kisaraginoah.nanione.mixin.CreativeModeInventoryScreenAccessor;
 import com.mojang.blaze3d.platform.InputConstants;

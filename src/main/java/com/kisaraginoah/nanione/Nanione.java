@@ -1,5 +1,6 @@
 package com.kisaraginoah.nanione;
 
+import com.kisaraginoah.nanione.init.ModCreativeTabs;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.slf4j.Logger;

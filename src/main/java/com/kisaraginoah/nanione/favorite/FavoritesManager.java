@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione;
+package com.kisaraginoah.nanione.favorite;
 
 import net.minecraft.world.item.ItemStack;
 

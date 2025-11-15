@@ -1,5 +1,6 @@
-package com.kisaraginoah.nanione;
+package com.kisaraginoah.nanione.init;
 
+import com.kisaraginoah.nanione.Nanione;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -12,6 +13,7 @@ public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Nanione.MODID);
 
+    //FavoriteTabの実装
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> FAVORITES_TAB =
             CREATIVE_TABS.register("favorites", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + Nanione.MODID + ".favorites"))

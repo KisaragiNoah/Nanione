@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione;
+package com.kisaraginoah.nanione.favorite;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;

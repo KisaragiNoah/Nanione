@@ -1,9 +1,9 @@
 package com.kisaraginoah.nanione.mixin;
 
-import com.kisaraginoah.nanione.FavoritesManager;
-import com.kisaraginoah.nanione.FavoritesTabRefresher;
-import com.kisaraginoah.nanione.FavoritesTabSelector;
-import com.kisaraginoah.nanione.ModCreativeTabs;
+import com.kisaraginoah.nanione.favorite.FavoritesManager;
+import com.kisaraginoah.nanione.favorite.FavoritesTabRefresher;
+import com.kisaraginoah.nanione.favorite.FavoritesTabSelector;
+import com.kisaraginoah.nanione.init.ModCreativeTabs;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.inventory.AbstractContainerMenu;
