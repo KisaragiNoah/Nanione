@@ -14,14 +14,23 @@ public class FavoriteKeyMappings {
 
     public static final Lazy<KeyMapping> TOGGLE_FAVORITE = Lazy.of(() ->
             new KeyMapping(
-                    "key." + Nanione.MODID + ".toggle_favorite",
+                    "key.nanione.toggle_favorite",
                     InputConstants.Type.KEYSYM,
                     GLFW.GLFW_KEY_K,
+                    KeyMapping.Category.CREATIVE
+            ));
+
+    public static final Lazy<KeyMapping> OPEN_FAVORITES_TAB = Lazy.of(() ->
+            new KeyMapping(
+                    "key.nanione.open_favorites_tab",
+                    InputConstants.Type.KEYSYM,
+                    GLFW.GLFW_KEY_G,
                     KeyMapping.Category.CREATIVE
             ));
 
     @SubscribeEvent
     public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
         event.register(TOGGLE_FAVORITE.get());
+        event.register(OPEN_FAVORITES_TAB.get());
     }
 }

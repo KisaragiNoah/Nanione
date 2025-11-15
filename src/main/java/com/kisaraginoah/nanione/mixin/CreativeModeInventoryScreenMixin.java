@@ -2,6 +2,7 @@ package com.kisaraginoah.nanione.mixin;
 
 import com.kisaraginoah.nanione.FavoritesManager;
 import com.kisaraginoah.nanione.FavoritesTabRefresher;
+import com.kisaraginoah.nanione.FavoritesTabSelector;
 import com.kisaraginoah.nanione.ModCreativeTabs;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
 import net.minecraft.core.NonNullList;
@@ -16,13 +17,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(CreativeModeInventoryScreen.class)
-public abstract class CreativeModeInventoryScreenMixin implements FavoritesTabRefresher {
+public abstract class CreativeModeInventoryScreenMixin implements FavoritesTabRefresher, FavoritesTabSelector {
 
     @Shadow
     private float scrollOffs;
 
     @Shadow
     private static CreativeModeTab selectedTab;
+
+    @Shadow
+    private void selectTab(CreativeModeTab tab) {}
 
 
     @Unique
@@ -56,5 +60,10 @@ public abstract class CreativeModeInventoryScreenMixin implements FavoritesTabRe
     @Override
     public void nanione$refreshFavoritesTab() {
         nanione$rebuildFavorites(false);
+    }
+
+    @Override
+    public void nanione$selectFavoritesTab() {
+        this.selectTab(ModCreativeTabs.FAVORITES_TAB.get());
     }
 }
