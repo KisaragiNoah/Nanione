@@ -1,0 +1,8 @@
+{
+  "itemGroup.nanione.favorites": "お気に入り",
+  "key.nanione.toggle_favorite": "お気に入り切り替え",
+  "nanione.toast.favorite_added.title": "お気に入りに追加",
+  "nanione.toast.favorite_added.desc": "%s をお気に入りに登録しました",
+  "nanione.toast.favorite_removed.title": "お気に入り解除",
+  "nanione.toast.favorite_removed.desc": "%s をお気に入りから解除しました"
+}
