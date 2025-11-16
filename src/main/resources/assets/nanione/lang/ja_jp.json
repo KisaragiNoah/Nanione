@@ -2,6 +2,7 @@
   "itemGroup.nanione.favorites": "お気に入り",
   "key.nanione.toggle_favorite": "お気に入り切り替え",
   "key.nanione.open_favorites_tab": "お気に入りタブを開く",
+  "key.nanione.command_toggle": "保存したコマンドを実行する",
   "nanione.toast.favorite_added.title": "お気に入りに追加",
   "nanione.toast.favorite_added.desc": "%s をお気に入りに登録しました",
   "nanione.toast.favorite_removed.title": "お気に入り解除",
