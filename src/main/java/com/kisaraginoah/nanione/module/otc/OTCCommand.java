@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione.module.occ;
+package com.kisaraginoah.nanione.module.otc;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -11,14 +11,14 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class OCCCommand {
+public class OTCCommand {
 
     @SubscribeEvent
     public static void onRegisterCommand(RegisterCommandsEvent event) {
         event.getDispatcher().register(
-                Commands.literal("occ")
+                Commands.literal("otc")
                         .then(Commands.argument("command", StringArgumentType.greedyString())
-                                .executes(OCCCommand::executeCommand))
+                                .executes(OTCCommand::executeCommand))
         );
     }
 
@@ -32,7 +32,7 @@ public class OCCCommand {
             normalised = raw;
         }
 
-        OCCCommandStorage.setStoredCommand(normalised);
+        OTCCommandStorage.setStoredCommand(normalised);
 
         context.getSource().sendSuccess(() ->
                 Component.literal("コマンド保存完了： /" + normalised), false);

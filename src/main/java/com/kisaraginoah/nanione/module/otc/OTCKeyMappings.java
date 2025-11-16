@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione.module.occ;
+package com.kisaraginoah.nanione.module.otc;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
@@ -10,7 +10,7 @@ import net.neoforged.neoforge.common.util.Lazy;
 import org.lwjgl.glfw.GLFW;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class OCCKeyMappings {
+public class OTCKeyMappings {
 
     public static final Lazy<KeyMapping> COMMAND_TOGGLE = Lazy.of(() ->
             new KeyMapping(

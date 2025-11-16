@@ -1,6 +1,6 @@
-package com.kisaraginoah.nanione.module.occ;
+package com.kisaraginoah.nanione.module.otc;
 
-public class OCCCommandStorage {
+public class OTCCommandStorage {
 
     private static String storedCommand = "";
 
