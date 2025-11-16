@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione.favorite;
+package com.kisaraginoah.nanione.module.favorite;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-public class FavoriteToast implements Toast {
+public class FavoritesToast implements Toast {
 
     private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("toast/recipe");
 
@@ -25,7 +25,7 @@ public class FavoriteToast implements Toast {
     private boolean changed = true;
     private Visibility wantedVisibility = Visibility.HIDE;
 
-    public FavoriteToast(ItemStack icon, Component title, Component desc) {
+    public FavoritesToast(ItemStack icon, Component title, Component desc) {
         this.icon = icon.copy();
         this.icon.setCount(1);
         this.title = title;

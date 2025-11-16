@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione.favorite;
+package com.kisaraginoah.nanione.module.favorite;
 
 import com.kisaraginoah.nanione.mixin.CreativeModeInventoryScreenAccessor;
 import com.mojang.blaze3d.platform.InputConstants;
@@ -17,7 +17,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class ClientEvents {
+public class FavoritesClientEvents {
 
     @SubscribeEvent
     public static void onKeyPressed(ScreenEvent.KeyPressed.Pre event) {
@@ -28,7 +28,7 @@ public class ClientEvents {
             if (box.isFocused()) return;
         }
 
-        KeyMapping keyMapping = FavoriteKeyMappings.TOGGLE_FAVORITE.get();
+        KeyMapping keyMapping = FavoritesKeyMappings.TOGGLE_FAVORITE.get();
         InputConstants.Key inputKey = InputConstants.getKey(event.getKeyEvent());
 
         if (!keyMapping.isActiveAndMatches(inputKey)) return;
@@ -58,7 +58,7 @@ public class ClientEvents {
                 desc = Component.translatable("nanione.toast.favorite_removed.desc", snapshot.getHoverName());
             }
 
-            mc.getToastManager().addToast(new FavoriteToast(snapshot, title, desc));
+            mc.getToastManager().addToast(new FavoritesToast(snapshot, title, desc));
         }
 
         if (mc.screen instanceof CreativeModeInventoryScreen creativeModeInventoryScreen && creativeModeInventoryScreen instanceof FavoritesTabRefresher refresher) {
@@ -74,7 +74,7 @@ public class ClientEvents {
         FavoritesManager.handleClientTick(mc);
         if (mc.player == null) return;
 
-        while (FavoriteKeyMappings.OPEN_FAVORITES_TAB.get().consumeClick()) {
+        while (FavoritesKeyMappings.OPEN_FAVORITES_TAB.get().consumeClick()) {
 
             if (!mc.gameMode.getPlayerMode().isCreative()) continue;
 

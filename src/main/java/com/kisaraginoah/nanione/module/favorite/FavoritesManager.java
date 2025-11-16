@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione.favorite;
+package com.kisaraginoah.nanione.module.favorite;
 
 import com.kisaraginoah.nanione.Nanione;
 import com.mojang.serialization.DataResult;

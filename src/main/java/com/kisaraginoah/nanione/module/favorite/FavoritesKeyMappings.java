@@ -1,4 +1,4 @@
-package com.kisaraginoah.nanione.favorite;
+package com.kisaraginoah.nanione.module.favorite;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
@@ -10,7 +10,7 @@ import net.neoforged.neoforge.common.util.Lazy;
 import org.lwjgl.glfw.GLFW;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class FavoriteKeyMappings {
+public class FavoritesKeyMappings {
 
     public static final Lazy<KeyMapping> TOGGLE_FAVORITE = Lazy.of(() ->
             new KeyMapping(
